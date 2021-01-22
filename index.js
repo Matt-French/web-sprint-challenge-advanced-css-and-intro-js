@@ -249,9 +249,9 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array){
   let rip20s = [];
   for(let i=0; i < array.length; i++){
-    range = parseInt(array[i].years)
+    let range = parseInt(array[i].years)
     if(range >= 1900 && range < 2000){
-      rip20s.push(array[i]);
+      rip20s.push(array[i].name);
     }
   }
   return rip20s;
@@ -290,10 +290,20 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(array){
-    array.push({})
+function addArtist(array, string1, string2, string3, string4, string5){
+  let newid = array.length;  
+  array.push({
+      id: newid,
+      name: string1,
+      years: string2,
+      genre: string3,
+      nationality: string4,
+      bio: string5,
+    })
+    return artists;
   }
-
+  
+  addArtist(artists, "Matt French", "1987 - 2021", "Web Design", "American", "lorem ipsum");
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
