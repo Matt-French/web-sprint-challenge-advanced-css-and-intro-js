@@ -1,3 +1,5 @@
+/*getting submission set up*/
+
 export const artists = [
     {
       "id": 0,
