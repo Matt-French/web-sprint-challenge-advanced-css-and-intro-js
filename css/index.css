@@ -20,6 +20,18 @@ font: inherit;
 vertical-align: baseline;  
 }
 /*GENERAL STYLES*/
+@media (max-width: 500px){
+    body{
+    margin:0;
+    width:100%;
+       overflow-x:hidden;
+    }
+    .artists-container{
+    display:flex;
+    flex-direction:column;
+    }
+}
+
 html{
     font-size:62.5%;
 }
