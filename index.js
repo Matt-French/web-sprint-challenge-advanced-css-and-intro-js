@@ -247,7 +247,14 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-
+  let rip20s = [];
+  for(let i=0; i < array.length; i++){
+    range = parseInt(array[i].years)
+    if(range >= 1900 && range < 2000){
+      rip20s.push(array[i]);
+    }
+  }
+  return rip20s;
 }
 
 
@@ -299,13 +306,12 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(array){
   let proficient = []
      for(let i=0; i < array.length; i++){
-     extra = parseInt(array[i].paintings);
+     let extra = parseInt(array[i].paintings);
      if(extra >= 100){
-     proficient.push(array[i]);
+     proficient.push(array[i].name);
    }
   }
-  return proficient;
-  
+  return proficient;  
  }
 
 
